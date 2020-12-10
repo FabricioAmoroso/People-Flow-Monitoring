@@ -55,3 +55,5 @@ This project is free and non-profit.
 
 ## Credits
 
+
+<img src="https://i.imgur.com/mksAQKw.png" width="250" height="250">
