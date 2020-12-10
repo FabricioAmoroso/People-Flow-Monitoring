@@ -1,6 +1,6 @@
 # People-Flow-Monitoring
 
-<img src="" width="250" height="250">
+<img src="https://i.imgur.com/gVSsYe8.png" width="250" height="250">
 
 *Read this in other languages: [English](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/README.md), [Portuguese](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/README-pt.md).*
 
