@@ -31,16 +31,26 @@ Recommended version 3.7.
 `conda create -n <environment-name> python=3.7`<br/>
 `conda activate <environment-name>` 
 
-### Necessary dependencies
-
 ### Download the repository
 Download the repository or clone by executing in the shell `git clone https://github.com/FabricioAmoroso/People-Flow-Monitoring.git`. After this steps it will be ready to use.
 
+### Necessary dependencies
+In order to properly install all the requirements <br/>
+`cd People-Flow-Monitoring`<br/>
+`pip install -r requirements.txt`<br/>
+`cd People-Flow-Monitoring`<br/>
+
+### Run code
+
+`python distanciamento.py --source 0 --weights yolov5s.pt --conf 0.25 --classes 0`
+
 ### Files guide
 
-### Code implementations
+[**distanciamento.py**](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/distanciamento.py) main code that calls the Heatmap class and implements people distancing and counting. 
 
-## Informations
+[**heatmap.py**](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/heatmap.py) is the HeatMap class.
+
+## Infos
 This project is part of the RAS Unesp Bauru projects. For more information about this and other projects, access: https://sites.google.com/unesp.br/rasunespbauru/home.
 
 ## Authors
