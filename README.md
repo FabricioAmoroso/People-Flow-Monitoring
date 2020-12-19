@@ -32,13 +32,12 @@ Recommended version 3.7.
 `conda activate <environment-name>` 
 
 ### Download the repository
-Download the repository or clone by executing in the shell `git clone https://github.com/FabricioAmoroso/People-Flow-Monitoring.git`. After this steps it will be ready to use.
+Download the repository or clone by executing in the shell `git clone https://github.com/FabricioAmoroso/People-Flow-Monitoring.git`.
 
 ### Necessary dependencies
 In order to properly install all the requirements <br/>
 `cd People-Flow-Monitoring`<br/>
 `pip install -r requirements.txt`<br/>
-`cd People-Flow-Monitoring`<br/>
 
 ### Run code
 
@@ -57,7 +56,7 @@ This project is part of the RAS Unesp Bauru projects. For more information about
 
 - [**Artur Starling**](https://github.com/ArturStarling)
 - [**Fabrício Amoroso**](https://github.com/FabricioAmoroso)
-- [**Gustavo Stahl**](https://github.com/GustavoStah)
+- [**Gustavo Stahl**](https://github.com/GustavoStahl)
 
 ## License
 
