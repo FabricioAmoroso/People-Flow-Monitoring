@@ -61,7 +61,7 @@ class Heatmap(object):
         new_grid = (new_grid // len(temp_grids))
         self.grids_remove_movement_temp = []
 
-        self.grids_remove_movement += 8*new_grid
+        self.grids_remove_movement += new_grid
         self.grids_remove_movement = np.clip(self.grids_remove_movement, 0, 255)
         self._generate_heatmap()
 
