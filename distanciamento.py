@@ -55,8 +55,6 @@ def detect(save_img=False):
     if half:
         model.half()  # to FP16
 
-    heatmap = Heatmap((480,640), 10)
-
     # Second-stage classifier
     classify = False
     if classify:
@@ -82,7 +80,14 @@ def detect(save_img=False):
     t0 = time.time()
     img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
     _ = model(img.half() if half else img) if device.type != 'cpu' else None  # run once
+    
+    first_pass = True
     for path, img, im0s, vid_cap in dataset:
+        if first_pass:
+            img_dims = img.shape[2:4] if len(img.shape) == 4 else img.shape[1:3]
+            heatmap = Heatmap(img_dims)
+            first_pass = False
+        
         img = torch.from_numpy(img).to(device)
         img = img.half() if half else img.float()  # uint8 to fp16/32
         img /= 255.0  # 0 - 255 to 0.0 - 1.0
