@@ -29,7 +29,8 @@ Recommended version 3.7.
 ### Create a conda virtual environment
 
 `conda create -n <environment-name> python=3.7`<br/>
-`conda activate <environment-name>` 
+`conda activate <environment-name>`<br/>
+`conda install cudatoolkit=10.2 cudnn=7.6.5`
 
 ### Download the repository
 Download the repository or clone by executing in the shell `git clone https://github.com/FabricioAmoroso/People-Flow-Monitoring.git`.
