@@ -8,6 +8,8 @@
 
 ### Description
 
+![](People-Monitoring.gif)
+
 The following project has the purpose to monitor indoor environments in order to detect people flow.
 There are three main features: Area of Interest detection, Social Distancing monitorng and Real Time People Counting.
 
