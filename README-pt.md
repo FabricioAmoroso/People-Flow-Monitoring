@@ -4,6 +4,8 @@
 
 *Disponível em outras línguas: [Inglês](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/README.md), [Português](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/README-pt.md).*
 
+> **ATENÇÃO** Esse README não está atualizado com as alterações feitas nessa branch
+
 ## Project operation
 
 ### Descrição

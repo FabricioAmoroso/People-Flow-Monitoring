@@ -4,6 +4,8 @@
 
 *Read this in other languages: [English](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/README.md), [Portuguese](https://github.com/FabricioAmoroso/People-Flow-Monitoring/blob/master/README-pt.md).*
 
+> **WARNING** This README is not up to date with the changes done in this branch
+
 ## Project operation
 
 ### Description
