@@ -48,6 +48,7 @@ This project is part of the RAS Unesp Bauru projects. For more information about
 - [**Artur Starling**](https://github.com/ArturStarling)
 - [**Fabrício Amoroso**](https://github.com/FabricioAmoroso)
 - [**Gustavo Stahl**](https://github.com/GustavoStah)
+- [**Rafael Conrado**](https://github.com/RafaelRagozoni)
 
 ## Licença
 
