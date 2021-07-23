@@ -38,7 +38,7 @@ class Heatmap(object):
         self.colorspace_bar = cv2.applyColorMap(colorspace_bar.transpose(), cv2.COLORMAP_JET)
         self.white_margin = 255*np.ones((self.camera_height,8,3),dtype=np.uint8)
 
-    def _grid_averages(self):
+    def __grid_averages(self):
         """
         Average the number of detections from a set.(e.g. takes the average number of people in scene 
         every 3 detections).
@@ -63,9 +63,8 @@ class Heatmap(object):
 
         self.grids_remove_movement += new_grid
         self.grids_remove_movement = np.clip(self.grids_remove_movement, 0, 255)
-        self._generate_heatmap()
 
-    def _box_center(self, xyxy):
+    def __box_center(self, xyxy):
         """
         Convert bounding box coordinates from top-right/bottom-left to center. (XlYt,XrYb)->(XcYc)
 
@@ -80,8 +79,7 @@ class Heatmap(object):
                 Tuple containing Xc,Yc coordinates converted from XlYt,YtYb
         """
 
-        center = (int(xyxy[0]+(xyxy[2]-xyxy[0])/2.0), int(xyxy[1]+(xyxy[3]-xyxy[1])/2.0))
-        return center
+        return int(xyxy[0]+(xyxy[2]-xyxy[0])/2.0), int(xyxy[1]+(xyxy[3]-xyxy[1])/2.0)
 
     
     def store_detections(self, detections):
@@ -104,7 +102,7 @@ class Heatmap(object):
         self.last_dets = []
         if detections is not None and len(detections):
             for *xyxy, _, _ in reversed(detections):
-                x, y = self._box_center(xyxy)
+                x, y = self.__box_center(xyxy)
                 if x >= self.camera_width or y >= self.camera_height:
                     continue
 
@@ -120,9 +118,9 @@ class Heatmap(object):
         self.grids_remove_movement_temp.append(temp_grid)
 
         if self.dets_thresh >= 5:
-            self._grid_averages()   
+            self.__grid_averages()   
 
-    def _generate_heatmap(self):
+    def generate_heatmap(self):
         """
         Draw averaged detections on heatmap.
 
@@ -150,11 +148,7 @@ class Heatmap(object):
         margin = self.white_margin
         image = np.hstack((margin, image, margin, self.colorspace_bar, margin))
 
-        cv2.imshow('Heatmap', image)
-        k = cv2.waitKey(1)
-        if k == ord('q'):
-            cv2.destroyAllWindows()
-            exit(0)
+        return image
 
 
 
